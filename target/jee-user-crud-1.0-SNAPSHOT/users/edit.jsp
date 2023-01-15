@@ -2,10 +2,9 @@
   Created by IntelliJ IDEA.
   User: krs
   Date: 15.01.2023
-  Time: 12:32
+  Time: 15:41
   To change this template use File | Settings | File Templates.
 --%>
-
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
@@ -23,18 +22,19 @@
     </div>
     <div class="card shadow mb-4">
         <div class="card-header py-3">
-            <h6 class="m-0 font-weight-bold text-primary"> Dodaj użytkownika</h6>
+            <h6 class="m-0 font-weight-bold text-primary"> Edycja użytkownika</h6>
         </div>
         <div class="card-body">
             <div class="table-responsive">
                 <form method="post">
+                    <input type="hidden" name="id" value="${user.id}"/>
                     <div class="form-group">
                         <label for="InputName">Nazwa</label>
-                        <input type="text" class="form-control" id="InputName" name="name" aria-describedby="emailHelp" placeholder="Nazwa użytkownika">
+                        <input type="text" class="form-control" id="InputName" name="name" aria-describedby="emailHelp" placeholder="${user.userName}">
                     </div>
                     <div class="form-group">
                         <label for="InputEmail">Email</label>
-                        <input type="email" class="form-control" id="InputEmail" name="email" aria-describedby="emailHelp" placeholder="Email użytkownika">
+                        <input type="email" class="form-control" id="InputEmail" name="email" aria-describedby="emailHelp" placeholder="${user.email}">
                     </div>
                     <div class="form-group">
                         <label for="InputPassword">Hasło</label>
